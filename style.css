@@ -1,0 +1,22 @@
+/* Tamaño fijo para las imágenes */
+.img-fluid {
+    width: 350px;  /* Cambiado de max-width a width */
+    height: 350px; /* Cambiado de max-height a height */
+    object-fit: cover; /* Mantiene el aspecto recortado */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+/* Centra el contenido y agrega un margen para los posts */
+.container {
+    margin-top: 50px;
+}
+
+/* Ajuste para la tarjeta */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el navbar */
+.navbar-brand img {
+    border-radius: 50%;
+}
