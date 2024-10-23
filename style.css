@@ -1,4 +1,8 @@
 /* Tamaño fijo para las imágenes */
+.img-fluid2 {
+    width: 300px;
+    height: 380px;
+}
 .img-fluid {
     width: 350px;  /* Cambiado de max-width a width */
     height: 350px; /* Cambiado de max-height a height */

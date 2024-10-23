@@ -20,7 +20,7 @@
                 Instagram
             </a>
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success me-2">Create a new post</button>
+                <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">Crear una nueva publicación</button>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,17 +37,126 @@
     </nav>
 
     <!-- Botones -->
-    <div class="container mt-4">
-        <div class="text-center mb-4">
-            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#columnView">Columna</button>
-            <button class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#resetView">Reestablecer</button>
+    <div class="d-flex justify-content-center">
+        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active bg-white text-secondary" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#columnView" type="button" role="tab" aria-controls="columnView" aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-secondary" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#resetView" type="button" role="tab" aria-controls="resetView" aria-selected="false">
+                    <i class="fa-solid fa-th-list"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row justify-content-center g-3" id="postContainer">
+        <!-- Vista columna -->
+        <div class="collapse show" id="columnView">
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">Marvel and DC</h5>
+                            <span class="text-muted">08/26</span>
+                        </div>
+                        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2019/03/DC-fi-1-1.jpg"
+                            class="img-fluid" alt="Marvel and DC">
+                        <div class="mt-3">
+                            <strong>204 Likes</strong>
+                            <p>This is an example of a very good photo that you can post on Instagram.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">Naruto!</h5>
+                            <span class="text-muted">09/01</span>
+                        </div>
+                        <img src="https://th.bing.com/th/id/OIP.0DV-d5HGqYE3NBnt_XjzFQHaF7?rs=1&pid=ImgDetMain"
+                            class="img-fluid" alt="Naruto">
+                        <div class="mt-3">
+                            <strong>150 Likes</strong>
+                            <p>Naruto!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">My heroe!</h5>
+                            <span class="text-muted">09/10</span>
+                        </div>
+                        <img src="https://th.bing.com/th/id/OIP.SVd8tX0kSMRRsAnCahOqwgHaEc?rs=1&pid=ImgDetMain"
+                            class="img-fluid" alt="My heroe!">
+                        <div class="mt-3">
+                            <strong>300 Likes</strong>
+                            <p>My heroe!.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">DRAGON!</h5>
+                            <span class="text-muted">09/15</span>
+                        </div>
+                        <img src="https://th.bing.com/th/id/OIP.uFL9QiE7P6IU0FaTdNRPIwHaEK?rs=1&pid=ImgDetMain"
+                            class="img-fluid" alt="DRAGON!">
+                        <div class="mt-3">
+                            <strong>220 Likes</strong>
+                            <p>DRAGON!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">Evening City View!</h5>
+                            <span class="text-muted">09/20</span>
+                        </div>
+                        <img src="https://otakukart.com/wp-content/uploads/2024/03/DAN-DA-DAN-A-1-scaled.webp"
+                            class="img-fluid" alt="City">
+                        <div class="mt-3">
+                            <strong>180 Likes</strong>
+                            <p>Enjoying the beautiful city lights at night.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">Charming Sunset!</h5>
+                            <span class="text-muted">09/22</span>
+                        </div>
+                        <img src="https://images.nintendolife.com/a9c26b9563a60/castlevania-netflix-series-4.original.jpg"
+                            class="img-fluid" alt="Sunset">
+                        <div class="mt-3">
+                            <strong>250 Likes</strong>
+                            <p>The sunset was breathtaking today!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row justify-content-center g-3" id="postContainer">
-
-            <!-- Vista columna-->
-            <div class="collapse" id="columnView">
-                <div class="col-12 mb-4">
+        <!-- Vista original -->
+        <div class="collapse" id="resetView">
+            <div class="row justify-content-center g-3">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
@@ -63,7 +172,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 mb-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
@@ -71,7 +181,7 @@
                                 <span class="text-muted">09/01</span>
                             </div>
                             <img src="https://th.bing.com/th/id/OIP.0DV-d5HGqYE3NBnt_XjzFQHaF7?rs=1&pid=ImgDetMain"
-                                class="img-fluid" alt="Naruto">
+                                class="img-fluid2" alt="Naruto">
                             <div class="mt-3">
                                 <strong>150 Likes</strong>
                                 <p>Naruto!</p>
@@ -79,7 +189,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 mb-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
@@ -87,15 +198,16 @@
                                 <span class="text-muted">09/10</span>
                             </div>
                             <img src="https://th.bing.com/th/id/OIP.SVd8tX0kSMRRsAnCahOqwgHaEc?rs=1&pid=ImgDetMain"
-                                class="img-fluid" alt="My heroe!">
+                                class="img-fluid2" alt="My heroe!">
                             <div class="mt-3">
                                 <strong>300 Likes</strong>
-                                <p>My heroe!.</p>
+                                <p>My heroe!</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 mb-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
@@ -103,7 +215,7 @@
                                 <span class="text-muted">09/15</span>
                             </div>
                             <img src="https://th.bing.com/th/id/OIP.uFL9QiE7P6IU0FaTdNRPIwHaEK?rs=1&pid=ImgDetMain"
-                                class="img-fluid" alt="DRAGON!">
+                                class="img-fluid2" alt="DRAGON!">
                             <div class="mt-3">
                                 <strong>220 Likes</strong>
                                 <p>DRAGON!</p>
@@ -111,7 +223,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 mb-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
@@ -127,7 +240,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 mb-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
@@ -144,117 +258,41 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Vista original -->
-            <div class="collapse" id="resetView">
-                <div class="row justify-content-center g-3">
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">Marvel and DC</h5>
-                                    <span class="text-muted">08/26</span>
-                                </div>
-                                <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2019/03/DC-fi-1-1.jpg"
-                                    class="img-fluid" alt="Marvel and DC">
-                                <div class="mt-3">
-                                    <strong>204 Likes</strong>
-                                    <p>This is an example of a very good photo that you can post on Instagram.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">Naruto!</h5>
-                                    <span class="text-muted">09/01</span>
-                                </div>
-                                <img src="https://th.bing.com/th/id/OIP.0DV-d5HGqYE3NBnt_XjzFQHaF7?rs=1&pid=ImgDetMain"
-                                    class="img-fluid" alt="Naruto">
-                                <div class="mt-3">
-                                    <strong>150 Likes</strong>
-                                    <p>Naruto!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">My heroe!!</h5>
-                                    <span class="text-muted">09/10</span>
-                                </div>
-                                <img src="https://th.bing.com/th/id/OIP.SVd8tX0kSMRRsAnCahOqwgHaEc?rs=1&pid=ImgDetMain"
-                                    class="img-fluid" alt="My heroe!">
-                                <div class="mt-3">
-                                    <strong>300 Likes</strong>
-                                    <p>My heroe!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">DRAGON!</h5>
-                                    <span class="text-muted">09/15</span>
-                                </div>
-                                <img src="https://th.bing.com/th/id/OIP.uFL9QiE7P6IU0FaTdNRPIwHaEK?rs=1&pid=ImgDetMain"
-                                    class="img-fluid" alt="DRAGON!">
-                                <div class="mt-3">
-                                    <strong>220 Likes</strong>
-                                    <p>DRAGON!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">Evening City View!</h5>
-                                    <span class="text-muted">09/20</span>
-                                </div>
-                                <img src="https://otakukart.com/wp-content/uploads/2024/03/DAN-DA-DAN-A-1-scaled.webp"
-                                    class="img-fluid" alt="City">
-                                <div class="mt-3">
-                                    <strong>180 Likes</strong>
-                                    <p>Enjoying the beautiful city lights at night.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">Charming Sunset!</h5>
-                                    <span class="text-muted">09/22</span>
-                                </div>
-                                <img src="https://images.nintendolife.com/a9c26b9563a60/castlevania-netflix-series-4.original.jpg"
-                                    class="img-fluid" alt="Sunset">
-                                <div class="mt-3">
-                                    <strong>250 Likes</strong>
-                                    <p>The sunset was breathtaking today!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Modal Scrollable -->
+<div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createPostModalLabel">Crear una nueva publicación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="postImage" class="form-label">URL de la Imagen</label>
+                        <input type="url" class="form-control" id="postImage" placeholder="https://example.com/image.jpg" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="postTitle" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postDescription" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="postDescription" rows="3" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Publicar</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
